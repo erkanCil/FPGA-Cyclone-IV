@@ -50,17 +50,17 @@ parameter
 
 //-------------Çıkış Portları Veri Tipleri------------------ 
 // Çıkış portları bellek elemanı(reg-yazmaç) veya bir tel olabilir	
-reg[15:0] 			bolmeKaydedici;
-reg[2:0]  			bol8gideniKaydedici;
-reg[2:0]  			bol8gelenKaydedici;
-reg[3:0] 			gidenDurumu;
-reg[3:0] 			gelenDurumu;
-reg[7:0] 			etkin;
-reg[7:0] 			gelenVeriTampon;
-reg[7:0] 			gidenVeriTampon;
-reg[4:0] 			gondermeDurumu;
-reg[19:0] 			beklemeSayaci;
-reg[7:0] 			display;
+reg[15:0] 				bolmeKaydedici;
+reg[2:0]  				bol8gideniKaydedici;
+reg[2:0]  				bol8gelenKaydedici;
+reg[3:0] 				gidenDurumu;
+reg[3:0] 				gelenDurumu;
+reg[7:0] 				etkin;
+reg[7:0] 				gelenVeriTampon;
+reg[7:0] 				gidenVeriTampon;
+reg[4:0] 				gondermeDurumu;
+reg[19:0] 				beklemeSayaci;
+reg[7:0] 				display;
 
 reg 					gidenBaudSaatDarbesi;
 reg 					gelenBaudSaatDarbesi;
@@ -84,12 +84,15 @@ assign dusukBit=0;
 // Bu bloğu saatin yükselen kenarına göre tetikleyeceğiz.
 always@(posedge saatDarbesi)
 begin
-	if(!sifirlama) begin 
+	if(!sifirlama) 
+	begin 
 		beklemeSayaci<=0;
 		beklemeSayaciBasla<=0;
 	 end
-	else if(beklemeSayaciBasla) begin
-		if(beklemeSayaci!=20'd800000) begin
+	else if(beklemeSayaciBasla) 
+	begin
+		if(beklemeSayaci!=20'd800000) 
+		begin
 			beklemeSayaci<=beklemeSayaci+1;
 		 end
 		else begin
@@ -110,7 +113,8 @@ begin
 	else begin
 		if(butonGiris2)
 			butonGiris1<=0;
-		else if(beklemeSayaci==20'd800000) begin
+		else if(beklemeSayaci==20'd800000) 
+		begin
 			if(!girisButon)
 				butonGiris1<=1;
 		 end
@@ -181,8 +185,10 @@ begin
 		butonGiris2<=0;
 	 end
 	else begin
-		if(!butonGiris2) begin
-			if(butonGiris1) begin
+		if(!butonGiris2) 
+		begin
+			if(butonGiris1) 
+			begin
 				butonGiris2<=1;
 			 end
 		 end
@@ -191,8 +197,10 @@ begin
 				4'b0000: begin  //BAŞLAMA Biti
 					if(!gidenBasla&&gondermeDurumu<16) 
 						gidenBasla<=1;
-					else if(gondermeDurumu<16) begin
-						if(gidenBaudSaatDarbesi) begin
+					else if(gondermeDurumu<16) 
+					begin
+						if(gidenBaudSaatDarbesi) 
+						begin
 							gidenVeriKaydedici<=0;
 							gidenDurumu<=gidenDurumu+1;
 						 end
@@ -203,70 +211,80 @@ begin
 					 end					
 				end		
 				4'b0001: begin //0. Giden Bit
-					if(gidenBaudSaatDarbesi) begin
+					if(gidenBaudSaatDarbesi) 
+					begin
 						gidenVeriKaydedici<=gidenVeriTampon[0];
 						gidenVeriTampon[7:0]<=gidenVeriTampon[7:1];
 						gidenDurumu<=gidenDurumu+1;
 					 end
 				 end
 				4'b0010: begin //1. Giden Bit
-					if(gidenBaudSaatDarbesi) begin
+					if(gidenBaudSaatDarbesi) 
+					begin
 						gidenVeriKaydedici<=gidenVeriTampon[0];
 						gidenVeriTampon[7:0]<=gidenVeriTampon[7:1];
 						gidenDurumu<=gidenDurumu+1;
 					 end
 				 end
 				 4'b0011: begin //2. Giden Bit
-				 	if(gidenBaudSaatDarbesi) begin
+				 	if(gidenBaudSaatDarbesi) 
+					begin
 						gidenVeriKaydedici<=gidenVeriTampon[0];
 						gidenVeriTampon[7:0]<=gidenVeriTampon[7:1];
 						gidenDurumu<=gidenDurumu+1;
 					 end
 				 end
 				4'b0100: begin //3. Giden Bit
-					if(gidenBaudSaatDarbesi) begin
+					if(gidenBaudSaatDarbesi) 
+					begin
 						gidenVeriKaydedici<=gidenVeriTampon[0];
 						gidenVeriTampon[7:0]<=gidenVeriTampon[7:1];
 						gidenDurumu<=gidenDurumu+1;
 					 end
 				 end
 				4'b0101: begin //4. Giden Bit
-					if(gidenBaudSaatDarbesi) begin
+					if(gidenBaudSaatDarbesi) 
+					begin
 						gidenVeriKaydedici<=gidenVeriTampon[0];
 						gidenVeriTampon[7:0]<=gidenVeriTampon[7:1];
 						gidenDurumu<=gidenDurumu+1;
 					 end
 				 end
 				4'b0110: begin //5. Giden Bit
-					if(gidenBaudSaatDarbesi) begin
+					if(gidenBaudSaatDarbesi) 
+					begin
 						gidenVeriKaydedici<=gidenVeriTampon[0];
 						gidenVeriTampon[7:0]<=gidenVeriTampon[7:1];
 						gidenDurumu<=gidenDurumu+1;
 					 end
 				 end
 				4'b0111: begin //6. Giden Bit
-					if(gidenBaudSaatDarbesi) begin
+					if(gidenBaudSaatDarbesi) 
+					begin
 						gidenVeriKaydedici<=gidenVeriTampon[0];
 						gidenVeriTampon[7:0]<=gidenVeriTampon[7:1];
 						gidenDurumu<=gidenDurumu+1;
 					 end
 				 end
 				4'b1000: begin //7. Giden Bit
-					if(gidenBaudSaatDarbesi) begin
+					if(gidenBaudSaatDarbesi) 
+					begin
 						gidenVeriKaydedici<=gidenVeriTampon[0];
 						gidenVeriTampon[7:0]<=gidenVeriTampon[7:1];
 						gidenDurumu<=gidenDurumu+1;
 					 end
 				 end
 				4'b1001: begin //BİTİRME Biti
-					if(gidenBaudSaatDarbesi) begin
+					if(gidenBaudSaatDarbesi) 
+					begin
 						gidenVeriKaydedici<=1;
 						gidenVeriTampon<=8'h55;
 						gidenDurumu<=gidenDurumu+1;
 					 end
 				 end
 				4'b1111:begin 
-					if(gidenBaudSaatDarbesi) begin
+					if(gidenBaudSaatDarbesi) 
+					begin
 						gidenDurumu<=gidenDurumu+1;
 						gondermeDurumu<=gondermeDurumu+1;
 						gidenBasla<=0;
@@ -307,7 +325,8 @@ begin
 					 end
 				 end
 				default: begin
-					if(gidenBaudSaatDarbesi) begin
+					if(gidenBaudSaatDarbesi) 
+					begin
 						gidenDurumu<=gidenDurumu+1;
 						gidenBasla<=1;
 					 end
@@ -319,7 +338,8 @@ end
 // Bilgisayardan Gelen Bilgiyi karşılama 
 always@(posedge baudx8SaatDarbesi or negedge sifirlama)
 begin
-	if(!sifirlama) begin
+	if(!sifirlama) 
+	begin
 		gelenVeriKaydedici1<=0;
 		gelenVeriKaydedici2<=0;
 		gelenVeriTampon<=0;
@@ -330,8 +350,10 @@ begin
 	else  begin
 		 gelenVeriKaydedici1<=gelenVeri;
 		 gelenVeriKaydedici2<=gelenVeriKaydedici1;
-		 if(gelenDurumu==0) begin
-			 if(gelenBaslaGecici==1) begin
+		 if(gelenDurumu==0) 
+		 begin
+			 if(gelenBaslaGecici==1) 
+			 begin
 		 		gelenBasla<=1;
 		 		gelenBaslaGecici<=0;
 				gelenDurumu<=gelenDurumu+1;
@@ -339,15 +361,19 @@ begin
 		 	 else if(!gelenVeriKaydedici1&&gelenVeriKaydedici2)
 				gelenBaslaGecici<=1;
 		   end
-		 else if(gelenDurumu>=1&&gelenDurumu<=8) begin
-		 	 if(gelenBaudSaatDarbesi) begin
+		 else if(gelenDurumu>=1&&gelenDurumu<=8) 
+		 begin
+		 	 if(gelenBaudSaatDarbesi) 
+			 begin
 			 	gelenVeriTampon[7]<=gelenVeriKaydedici2;
 				gelenVeriTampon[6:0]<=gelenVeriTampon[7:1];
 				gelenDurumu<=gelenDurumu+1;
 			  end
 		  end
-		 else if(gelenDurumu==9) begin
-		 	if(gelenBaudSaatDarbesi) begin
+		 else if(gelenDurumu==9) 
+		 begin
+		 	if(gelenBaudSaatDarbesi) 
+			begin
 		 		gelenDurumu<=0;
 				gelenBasla<=0;
 			 end
@@ -355,7 +381,7 @@ begin
 	  end
 end
 
-always@(gelenVeriTampon) //??????????????
+always@(gelenVeriTampon)
 begin
       case (gelenVeriTampon)
 		durum0:						//durum0
