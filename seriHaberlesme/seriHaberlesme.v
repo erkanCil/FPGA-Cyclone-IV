@@ -23,8 +23,8 @@ input 				gelenVeri;
 input 				girisButon;
 
 //-------------Çıkış Portları-----------------------------
-output[7:0] 		etkin;
-output[7:0] 		display;
+output[7:0]			etkin;
+output[7:0]			display;
 output 				gidenVeri;
 output 				dusukBit;
 
