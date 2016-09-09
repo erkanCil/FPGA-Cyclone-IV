@@ -18,15 +18,15 @@ module seriHaberlesme(saatDarbesi,sifirlama,gelenVeri,gidenVeri,etkin,display,gi
 // seriHaberlesme MODÜLÜ TANIMI
 
 //-------------Giriş Portları-----------------------------
-input 				saatDarbesi,sifirlama;
-input 				gelenVeri;
-input 				girisButon;
+input					saatDarbesi,sifirlama;
+input					gelenVeri;
+input					girisButon;
 
 //-------------Çıkış Portları-----------------------------
-output[7:0]			etkin;
-output[7:0]			display;
-output 				gidenVeri;
-output 				dusukBit;
+output[7:0]				etkin;
+output[7:0]				display;
+output					gidenVeri;
+output					dusukBit;
 
 //-------------Parametre Tanımlamaları--------------------
 parameter 
@@ -50,29 +50,29 @@ parameter
 
 //-------------Çıkış Portları Veri Tipleri------------------ 
 // Çıkış portları bellek elemanı(reg-yazmaç) veya bir tel olabilir	
-reg[15:0] 				bolmeKaydedici;
-reg[2:0]  				bol8gideniKaydedici;
-reg[2:0]  				bol8gelenKaydedici;
-reg[3:0] 				gidenDurumu;
-reg[3:0] 				gelenDurumu;
-reg[7:0] 				etkin;
-reg[7:0] 				gelenVeriTampon;
-reg[7:0] 				gidenVeriTampon;
-reg[4:0] 				gondermeDurumu;
-reg[19:0] 				beklemeSayaci;
-reg[7:0] 				display;
+reg[15:0]				bolmeKaydedici;
+reg[2:0]					bol8gideniKaydedici;
+reg[2:0]					bol8gelenKaydedici;
+reg[3:0]					gidenDurumu;
+reg[3:0]					gelenDurumu;
+reg[7:0]					etkin;
+reg[7:0]					gelenVeriTampon;
+reg[7:0]					gidenVeriTampon;
+reg[4:0]					gondermeDurumu;
+reg[19:0]				beklemeSayaci;
+reg[7:0]					display;
 
-reg 					gidenBaudSaatDarbesi;
-reg 					gelenBaudSaatDarbesi;
-reg 					baudx8SaatDarbesi;
-reg 					gelenBasla;
-reg 					gelenBaslaGecici;
-reg 					gidenBasla;
-reg 					gelenVeriKaydedici1;
-reg 					gelenVeriKaydedici2;
-reg 					gidenVeriKaydedici;
-reg 					beklemeSayaciBasla;
-reg 					butonGiris1,butonGiris2;
+reg						gidenBaudSaatDarbesi;
+reg						gelenBaudSaatDarbesi;
+reg						baudx8SaatDarbesi;
+reg						gelenBasla;
+reg						gelenBaslaGecici;
+reg						gidenBasla;
+reg						gelenVeriKaydedici1;
+reg						gelenVeriKaydedici2;
+reg						gidenVeriKaydedici;
+reg						beklemeSayaciBasla;
+reg						butonGiris1,butonGiris2;
 
 //-------------Doğrusal Tanımlamalar-------------------------
 assign gidenVeri=gidenVeriKaydedici;
