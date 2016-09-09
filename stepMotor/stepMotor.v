@@ -43,7 +43,7 @@ case(sayac[29:29])
 0: 
  begin
   case ( sayac[18:16] ) //case döngüsünün sayaç ile döndürülmesi
-  // 8 bitlik stepMotor çıkış değerlerinin registere ve oradanda çıkışa aktarılması
+  // 4 bitlik stepMotor çıkış değerlerinin registere ve oradanda çıkışa aktarılması
   0: motorCikis<=4'b0001;
   
   1: motorCikis<=4'b0011;
@@ -68,7 +68,7 @@ case(sayac[29:29])
 1: begin 
   
   case ( sayac[18:16] ) //case döngüsünün sayaç ile döndürülmesi
-  // 8 bitlik stepMotor çıkış değerlerinin registere ve oradanda çıkışa aktarılması
+  // 4 bitlik stepMotor çıkış değerlerinin registere ve oradanda çıkışa aktarılması
   0: motorCikis<=4'b1001;
   
   1: motorCikis<=4'b1000;
