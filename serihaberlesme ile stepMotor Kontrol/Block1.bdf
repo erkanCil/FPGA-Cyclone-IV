@@ -1,0 +1,324 @@
+/*
+WARNING: Do NOT edit the input and output ports in this file in a text
+editor if you plan to continue editing the block that represents it in
+the Block Editor! File corruption is VERY likely to occur.
+*/
+/*
+Copyright (C) 1991-2015 Altera Corporation. All rights reserved.
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, the Altera Quartus Prime License Agreement,
+the Altera MegaCore Function License Agreement, or other 
+applicable license agreement, including, without limitation, 
+that your use is for the sole purpose of programming logic 
+devices manufactured by Altera and sold by Altera or its 
+authorized distributors.  Please refer to the applicable 
+agreement for further details.
+*/
+(header "graphic" (version "1.4"))
+(pin
+	(input)
+	(rect 216 152 392 168)
+	(text "INPUT" (rect 133 0 174 11)(font "Arial" (font_size 6)))
+	(text "saatDarbesi" (rect 9 0 99 14)(font "Arial" ))
+	(pt 176 8)
+	(drawing
+		(line (pt 92 12)(pt 117 12))
+		(line (pt 92 4)(pt 117 4))
+		(line (pt 121 8)(pt 176 8))
+		(line (pt 92 12)(pt 92 4))
+		(line (pt 117 4)(pt 121 8))
+		(line (pt 117 12)(pt 121 8))
+	)
+	(text "VCC" (rect 136 7 160 18)(font "Arial" (font_size 6)))
+	(annotation_block (location)(rect 136 168 216 200))
+)
+(pin
+	(input)
+	(rect 216 272 392 288)
+	(text "INPUT" (rect 133 0 174 11)(font "Arial" (font_size 6)))
+	(text "rst" (rect 9 0 33 14)(font "Arial" ))
+	(pt 176 8)
+	(drawing
+		(line (pt 92 12)(pt 117 12))
+		(line (pt 92 4)(pt 117 4))
+		(line (pt 121 8)(pt 176 8))
+		(line (pt 92 12)(pt 92 4))
+		(line (pt 117 4)(pt 121 8))
+		(line (pt 117 12)(pt 121 8))
+	)
+	(text "VCC" (rect 136 7 160 18)(font "Arial" (font_size 6)))
+	(annotation_block (location)(rect 136 288 216 320))
+)
+(pin
+	(input)
+	(rect 320 336 496 352)
+	(text "INPUT" (rect 133 0 174 11)(font "Arial" (font_size 6)))
+	(text "gelenVeri" (rect 9 0 83 14)(font "Arial" ))
+	(pt 176 8)
+	(drawing
+		(line (pt 92 12)(pt 117 12))
+		(line (pt 92 4)(pt 117 4))
+		(line (pt 121 8)(pt 176 8))
+		(line (pt 92 12)(pt 92 4))
+		(line (pt 117 4)(pt 121 8))
+		(line (pt 117 12)(pt 121 8))
+	)
+	(text "VCC" (rect 136 7 160 18)(font "Arial" (font_size 6)))
+	(annotation_block (location)(rect 240 352 320 384))
+)
+(pin
+	(input)
+	(rect 320 352 496 368)
+	(text "INPUT" (rect 133 0 174 11)(font "Arial" (font_size 6)))
+	(text "girisButon" (rect 9 0 91 14)(font "Arial" ))
+	(pt 176 8)
+	(drawing
+		(line (pt 92 12)(pt 117 12))
+		(line (pt 92 4)(pt 117 4))
+		(line (pt 121 8)(pt 176 8))
+		(line (pt 92 12)(pt 92 4))
+		(line (pt 117 4)(pt 121 8))
+		(line (pt 117 12)(pt 121 8))
+	)
+	(text "VCC" (rect 136 7 160 18)(font "Arial" (font_size 6)))
+	(annotation_block (location)(rect 240 368 320 400))
+)
+(pin
+	(output)
+	(rect 768 304 944 320)
+	(text "OUTPUT" (rect 1 0 50 11)(font "Arial" (font_size 6)))
+	(text "gidenVeri" (rect 90 0 164 14)(font "Arial" ))
+	(pt 0 8)
+	(drawing
+		(line (pt 0 8)(pt 52 8))
+		(line (pt 52 4)(pt 78 4))
+		(line (pt 52 12)(pt 78 12))
+		(line (pt 52 12)(pt 52 4))
+		(line (pt 78 4)(pt 82 8))
+		(line (pt 82 8)(pt 78 12))
+		(line (pt 78 12)(pt 82 8))
+	)
+	(annotation_block (location)(rect 944 320 1024 352))
+)
+(pin
+	(output)
+	(rect 768 336 944 352)
+	(text "OUTPUT" (rect 1 0 50 11)(font "Arial" (font_size 6)))
+	(text "dusukBit" (rect 90 0 156 14)(font "Arial" ))
+	(pt 0 8)
+	(drawing
+		(line (pt 0 8)(pt 52 8))
+		(line (pt 52 4)(pt 78 4))
+		(line (pt 52 12)(pt 78 12))
+		(line (pt 52 12)(pt 52 4))
+		(line (pt 78 4)(pt 82 8))
+		(line (pt 82 8)(pt 78 12))
+		(line (pt 78 12)(pt 82 8))
+	)
+	(annotation_block (location)(rect 944 352 1024 384))
+)
+(pin
+	(output)
+	(rect 1048 152 1224 168)
+	(text "OUTPUT" (rect 1 0 50 11)(font "Arial" (font_size 6)))
+	(text "motorCikis[3..0]" (rect 90 0 222 14)(font "Arial" ))
+	(pt 0 8)
+	(drawing
+		(line (pt 0 8)(pt 52 8))
+		(line (pt 52 4)(pt 78 4))
+		(line (pt 52 12)(pt 78 12))
+		(line (pt 52 12)(pt 52 4))
+		(line (pt 78 4)(pt 82 8))
+		(line (pt 82 8)(pt 78 12))
+		(line (pt 78 12)(pt 82 8))
+	)
+	(annotation_block (location)(rect 1224 168 1304 200))
+)
+(symbol
+	(rect 792 128 1008 240)
+	(text "stepMotor" (rect 5 0 79 14)(font "Arial" ))
+	(text "inst" (rect 8 96 41 110)(font "Arial" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "saatDarbesi" (rect 0 0 90 14)(font "Arial" ))
+		(text "saatDarbesi" (rect 21 27 111 41)(font "Arial" ))
+		(line (pt 0 32)(pt 16 32))
+	)
+	(port
+		(pt 0 48)
+		(input)
+		(text "rst" (rect 0 0 24 14)(font "Arial" ))
+		(text "rst" (rect 21 43 45 57)(font "Arial" ))
+		(line (pt 0 48)(pt 16 48))
+	)
+	(port
+		(pt 0 64)
+		(input)
+		(text "yonGiris[1..0]" (rect 0 0 115 14)(font "Arial" ))
+		(text "yonGiris[1..0]" (rect 21 59 136 73)(font "Arial" ))
+		(line (pt 0 64)(pt 16 64)(line_width 3))
+	)
+	(port
+		(pt 216 32)
+		(output)
+		(text "motorCikis[3..0]" (rect 0 0 132 14)(font "Arial" ))
+		(text "motorCikis[3..0]" (rect 84 27 195 41)(font "Arial" ))
+		(line (pt 216 32)(pt 200 32)(line_width 3))
+	)
+	(drawing
+		(rectangle (rect 16 16 200 96))
+	)
+)
+(symbol
+	(rect 520 280 728 392)
+	(text "seriHaberlesme" (rect 5 0 120 14)(font "Arial" ))
+	(text "inst7" (rect 8 96 49 110)(font "Arial" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "saatDarbesi" (rect 0 0 90 14)(font "Arial" ))
+		(text "saatDarbesi" (rect 21 27 111 41)(font "Arial" ))
+		(line (pt 0 32)(pt 16 32))
+	)
+	(port
+		(pt 0 48)
+		(input)
+		(text "sifirlama" (rect 0 0 74 14)(font "Arial" ))
+		(text "sifirlama" (rect 21 43 95 57)(font "Arial" ))
+		(line (pt 0 48)(pt 16 48))
+	)
+	(port
+		(pt 0 64)
+		(input)
+		(text "gelenVeri" (rect 0 0 74 14)(font "Arial" ))
+		(text "gelenVeri" (rect 21 59 95 73)(font "Arial" ))
+		(line (pt 0 64)(pt 16 64))
+	)
+	(port
+		(pt 0 80)
+		(input)
+		(text "girisButon" (rect 0 0 82 14)(font "Arial" ))
+		(text "girisButon" (rect 21 75 103 89)(font "Arial" ))
+		(line (pt 0 80)(pt 16 80))
+	)
+	(port
+		(pt 208 32)
+		(output)
+		(text "gidenVeri" (rect 0 0 74 14)(font "Arial" ))
+		(text "gidenVeri" (rect 125 27 187 41)(font "Arial" ))
+		(line (pt 208 32)(pt 192 32))
+	)
+	(port
+		(pt 208 48)
+		(output)
+		(text "stepMotor[1..0]" (rect 0 0 123 14)(font "Arial" ))
+		(text "stepMotor[1..0]" (rect 83 43 187 57)(font "Arial" ))
+		(line (pt 208 48)(pt 192 48)(line_width 3))
+	)
+	(port
+		(pt 208 64)
+		(output)
+		(text "dusukBit" (rect 0 0 66 14)(font "Arial" ))
+		(text "dusukBit" (rect 132 59 187 73)(font "Arial" ))
+		(line (pt 208 64)(pt 192 64))
+	)
+	(parameter
+		"baudBolmeSabiti"
+		"0000000101000101"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"durumi"
+		"01101001"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"durumg"
+		"01100111"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(drawing
+		(rectangle (rect 16 16 192 96))
+	)
+	(annotation_block (parameter)(rect 288 424 760 512))
+)
+(connector
+	(pt 512 312)
+	(pt 520 312)
+)
+(connector
+	(pt 512 160)
+	(pt 512 312)
+)
+(connector
+	(pt 496 328)
+	(pt 520 328)
+)
+(connector
+	(pt 728 312)
+	(pt 768 312)
+)
+(connector
+	(pt 728 344)
+	(pt 768 344)
+)
+(connector
+	(pt 496 344)
+	(pt 520 344)
+)
+(connector
+	(pt 496 360)
+	(pt 520 360)
+)
+(connector
+	(pt 728 328)
+	(pt 752 328)
+	(bus)
+)
+(connector
+	(pt 752 328)
+	(pt 752 192)
+	(bus)
+)
+(connector
+	(pt 1048 160)
+	(pt 1008 160)
+	(bus)
+)
+(connector
+	(pt 496 176)
+	(pt 496 280)
+)
+(connector
+	(pt 496 280)
+	(pt 496 328)
+)
+(connector
+	(pt 392 160)
+	(pt 512 160)
+)
+(connector
+	(pt 512 160)
+	(pt 792 160)
+)
+(connector
+	(pt 496 176)
+	(pt 792 176)
+)
+(connector
+	(pt 752 192)
+	(pt 792 192)
+	(bus)
+)
+(connector
+	(pt 392 280)
+	(pt 496 280)
+)
+(junction (pt 512 160))
+(junction (pt 496 280))
