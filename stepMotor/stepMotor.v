@@ -26,7 +26,6 @@ output [3:0] motorCikis;  //motorCikis 12 bitlik çıkış olarak tanımlanmış
 // Çıkış portları bellek elemanı(reg-yazmaç) veya bir tel olabilir
 reg [3:0] motorCikis;	//motorCikis register(kayıtcısının oluşturulması)
 reg [31:0] sayac; //sayac register(kayıtcısının oluşturulması)
-reg [1:0] yon;
 //------------Kod Burada Başlamaktadır------------------------- 
 // Ana döngü bloğu
 // Bu sayaç yükselen kenar tetiklemeli olduğundan,
